@@ -6,6 +6,8 @@ import { ByPaisPageComponent } from './pages/by-pais-page/by-pais-page.component
 import { PaisPageComponent } from './pages/pais-page/pais-page.component';
 import { PaisesRountingModule } from './paises-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { PaisesTablaComponent } from './components/paises-tabla/paises-tabla.component';
+
 
 
 
@@ -14,12 +16,13 @@ import { SharedModule } from '../shared/shared.module';
     ByCapitalPageComponent,
     ByPaisPageComponent,
     ByRegionPageComponent,
-    PaisPageComponent
+    PaisPageComponent,
+    PaisesTablaComponent
   ],
   imports: [
     CommonModule,
     PaisesRountingModule,
-    SharedModule
+    SharedModule,
   ]
 })
 export class PaisesModule { }
