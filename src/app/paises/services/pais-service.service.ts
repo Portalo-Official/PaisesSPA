@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Pais } from '../interfaces/paises.interface';
 import { environmets } from '../../environments/environments';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +20,9 @@ export class PaisServiceService {
 
     const url = `${this.baseUrl}/${this.endPoint}/${capital}`;
 
-    return this.http.get<Pais[]>(url);
+    return this.http.get<Pais[]>(url).pipe(
+      catchError(() => of([]))
+    );
   }
 
   private set paisesList( paises : Array<Pais>){
