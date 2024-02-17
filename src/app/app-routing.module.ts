@@ -19,9 +19,13 @@ const routes: Routes = [
     component: ContactPageComponent
   },
   {
+    path: 'paises',
+    loadChildren: () => import('./paises/paises.module').then( m => m.PaisesModule)
+  },
+  {
     path: '**',
-    redirectTo: 'home'
-  }
+    redirectTo: 'paises'
+  },
 ];
 
 @NgModule({
