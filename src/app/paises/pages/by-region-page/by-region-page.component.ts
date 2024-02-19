@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Pais } from '../../interfaces/paises.interface';
+import { PaisServiceService } from '../../services/pais-service.service';
 
 @Component({
   selector: 'app-by-region-page',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styles: ``
 })
 export class ByRegionPageComponent {
+
+  public paisList: Array<Pais> =[];
+
+  constructor( private paisService: PaisServiceService){}
+
+  public searchPaisByRegion(region : string){
+    this.paisService.getPaisByRegion(region)
+                    .subscribe(resp=> this.paisList = resp);
+  }
 
 }

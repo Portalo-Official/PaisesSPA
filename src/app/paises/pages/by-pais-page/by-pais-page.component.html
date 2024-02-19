@@ -1,1 +1,18 @@
-<p>by-pais-page works!</p>
+<h2>Por pais</h2>
+<hr>
+<div class="row">
+  <div class="col">
+    <shared-serach-box _placeHolder="Burcar por pais..."
+                      (onValue)="getPaisesByPais($event)"></shared-serach-box>
+  </div>
+
+  <div>
+    <div class="row">
+      <div class="col">
+        <hr>
+        <!-- TODO Cards -->
+        <paises-paises-tabla [paisesList]="paisesList"></paises-paises-tabla>
+      </div>
+    </div>
+  </div>
+</div>

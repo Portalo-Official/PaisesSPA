@@ -1,6 +1,6 @@
 # Paisesspa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+Proyecto para practicar angular con la Api [Country](https://restcountries.com/#endpoints-capital-city)
 
 ## Development server
 

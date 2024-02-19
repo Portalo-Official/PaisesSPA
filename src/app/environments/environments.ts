@@ -4,6 +4,7 @@ export const environmets = {
   endPoint: {
     byCapital:'capital',
     byCountry:'name',
-    byRegion: 'region'
+    byRegion: 'region',
+    byID:'alpha'
   }
 }
